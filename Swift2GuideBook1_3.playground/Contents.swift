@@ -64,3 +64,25 @@ class SampleTimer: NSObject
 
 let sampleTimer = SampleTimer()
 sampleTimer.timerStart()
+
+//1.5
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+class SampleTimer2: NSObject
+{
+  func timerStart()
+  {
+    NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "fire", userInfo: nil, repeats: true)
+  }
+  var counter = 0
+  func fire()
+  {
+//    XCPCaptureValue("count", value: ++counter)
+//    XCPCaptureValue("random", value: arc4random_uniform(100))
+    XCPlaygroundPage.currentPage.captureValue(++counter, withIdentifier: "count")
+    XCPlaygroundPage.currentPage.captureValue(arc4random_uniform(100), withIdentifier: "random")
+  }
+}
+
+let sampleTimer2 = SampleTimer2()
+sampleTimer2.timerStart()
