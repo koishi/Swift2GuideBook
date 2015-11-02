@@ -45,5 +45,22 @@ let view = CircleView(frame: circleRect)
 
 XCPlaygroundPage.currentPage.liveView = view
 
+//1.4
 
+//XCPSetExecutionShouldContinueIndefinitely(true)
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+class SampleTimer: NSObject
+{
+  func timerStart()
+  {
+    NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "fire", userInfo: nil, repeats: true)
+  }
+  var counter = 0
+  func fire()
+  {
+    print("timer fire!")
+  }
+}
 
+let sampleTimer = SampleTimer()
+sampleTimer.timerStart()
