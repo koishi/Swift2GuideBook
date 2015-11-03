@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+// 2.22
+
+// MARK: -
+// MARK: PrivateMethods
+// TODO: 処理を書く
+// FIXME: 関数名を変更する
+
+// MARK: -
+// MARK: PrivateMethods
+// MARK: -
+// TODO: 処理を書く
+// MARK: -
+// FIXME: 関数名を変更する
