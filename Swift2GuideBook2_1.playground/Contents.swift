@@ -34,3 +34,33 @@ class Sample: NSObject
 let sample = Sample()
 sample.baseCount = 100
 sample.sum("arg")
+
+// 2.20 パラメータと戻り値の例
+
+class Parameter {
+  /**
+  サンプルメソッド
+  - parameter text: text詳細
+  - returns: 戻り値
+  */
+  func sample(text: String) -> Bool
+  {
+    return true
+  }
+
+  // 2.21 複数のパラメータとエラー例
+  
+  /**
+   サンプルメソッド
+
+   - parameter:
+      - text: text
+      - index: インデックス
+      - height: 高さ
+   - throws: エラー
+   */
+  func sampleMultiParameter(text: String, index: Int, height: Double) throws
+  {
+    throw(NSError(domain: "", code: -1, userInfo: nil))
+  }
+}
