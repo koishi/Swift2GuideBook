@@ -93,3 +93,13 @@ print(prefecture.0,prefecture.1)
 // タプルの分解
 let (_,textValue) = prefecture
 print(textValue)
+
+// MARK: -
+// MARK: 2-1-6 Optional
+
+// オプショナル型
+var index: Int? = nil
+var indexOptional: Optional<Int> = nil
+
+var youMessage: String? = nil
+var youMessageOptional:Optional<String> = nil
